@@ -1,0 +1,503 @@
+
+/* ==========================================
+   BIOGRAFIA DE MICHELZIM
+   DESIGN MODERNO | DARK PREMIUM AZUL NEON
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
+
+:root {
+    --fundo: #09090f;
+    --superficie: #13131e;
+    --superficie2: #1b1b29;
+    --principal: #60a5fa;
+    --secundaria: #2563eb;
+    --texto: #e5e5ed;
+    --texto2: #a1a1b3;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* LINKS */
+
+a {
+    color: var(--principal);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--branco);
+}
+
+/* ==========================================
+   TELA DE ABERTURA
+========================================== */
+
+#abertura {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background:
+        radial-gradient(circle at center, #102448 0%, #09090f 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.conteudo-abertura {
+    max-width: 700px;
+    padding: 45px 30px;
+    background: rgba(19, 19, 30, 0.85);
+    border: 2px solid var(--principal);
+    border-radius: 20px;
+    box-shadow:
+        0 0 20px rgba(96, 165, 250, 0.3),
+        0 0 50px rgba(37, 99, 235, 0.15);
+    animation: aparecer 1s ease;
+}
+
+#abertura h1 {
+    color: var(--principal);
+    font-size: clamp(28px, 5vw, 45px);
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(96, 165, 250, 0.6);
+}
+
+#abertura p {
+    color: var(--texto);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#abertura .mensagem {
+    color: var(--texto2);
+    font-size: 14px;
+}
+
+#abertura button {
+    margin-top: 25px;
+    padding: 15px 30px;
+    background: var(--secundaria);
+    color: var(--branco);
+    border: 2px solid var(--principal);
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#abertura button:hover {
+    background: var(--principal);
+    color: var(--fundo);
+    box-shadow: 0 0 25px var(--principal);
+    transform: translateY(-4px);
+}
+
+#abertura.sumir {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    background: var(--superficie);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+header h1 {
+    color: var(--principal);
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--principal);
+}
+
+/* ==========================================
+   SEÇÕES
+========================================== */
+
+section {
+    padding: 80px 8%;
+}
+
+section h2 {
+    color: var(--principal);
+    font-size: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* INÍCIO */
+
+#inicio {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(
+        circle,
+        #102448 0%,
+        var(--fundo) 70%
+    );
+}
+
+#inicio h1 {
+    font-size: clamp(30px, 5vw, 52px);
+    color: var(--branco);
+    margin-bottom: 15px;
+}
+
+#inicio h1 span {
+    color: var(--principal);
+}
+
+#inicio p {
+    color: var(--texto2);
+    max-width: 650px;
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+button,
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background: var(--secundaria);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+.btn:hover {
+    background: var(--principal);
+    color: var(--fundo);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.4);
+}
+
+/* ==========================================
+   SOBRE
+========================================== */
+
+#sobre {
+    background: var(--superficie);
+}
+
+#sobre p {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    color: var(--texto2);
+}
+
+/* ==========================================
+   HABILIDADES
+========================================== */
+
+#habilidades {
+    background: var(--fundo);
+}
+
+.habilidades,
+.lista-habilidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.habilidades span,
+.lista-habilidades span {
+    background: var(--superficie2);
+    color: var(--principal);
+    padding: 12px 20px;
+    border: 1px solid var(--secundaria);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.habilidades span:hover,
+.lista-habilidades span:hover {
+    background: var(--secundaria);
+    color: var(--branco);
+    transform: translateY(-4px);
+}
+
+/* ==========================================
+   PROJETOS
+========================================== */
+
+#projetos {
+    background: var(--superficie);
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.projeto,
+.card {
+    background: var(--superficie2);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    transition: 0.3s;
+}
+
+.projeto:hover,
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--principal);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+}
+
+.projeto h3,
+.card h3 {
+    color: var(--principal);
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   CURRÍCULO
+========================================== */
+
+#curriculo {
+    text-align: center;
+    background: var(--fundo);
+}
+
+/* ==========================================
+   CONTATO
+========================================== */
+
+#contato {
+    background: var(--superficie);
+    text-align: center;
+}
+
+form {
+    max-width: 550px;
+    margin: 25px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    background: var(--superficie2);
+    border: 1px solid #293c5c;
+    border-radius: 8px;
+    color: var(--branco);
+    font-family: inherit;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--principal);
+    box-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* ==========================================
+   FOTO DE PERFIL
+========================================== */
+
+.foto-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.foto-perfil img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--principal);
+    box-shadow: 0 0 12px rgba(96, 165, 250, 0.4);
+    display: block;
+}
+
+/* ==========================================
+   VOLTAR AO INÍCIO
+========================================== */
+
+.voltar-inicio {
+    display: block;
+    width: fit-content;
+    margin: 35px auto;
+    padding: 12px 24px;
+    background: var(--secundaria);
+    color: var(--branco);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.voltar-inicio:hover {
+    background: var(--principal);
+    color: var(--fundo);
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.4);
+}
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+footer {
+    padding: 25px;
+    background: #06060b;
+    text-align: center;
+    color: var(--texto2);
+    border-top: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+/* ==========================================
+   ANIMAÇÕES
+========================================== */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: aparecer 0.8s ease;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    #inicio {
+        min-height: 65vh;
+    }
+
+    .foto-perfil img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .conteudo-abertura {
+        padding: 35px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    #abertura p {
+        font-size: 13px;
+    }
+
+    #abertura button {
+        font-size: 13px;
+    }
+}
